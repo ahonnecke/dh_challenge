@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[scripts]
+api = "python -m flask run"
+cli = "python /app/cli.py"
+lint = "/app/bin/lint.sh"
+unit = "/app/bin/unit_tests.sh"
+
+[packages]
+argparse = "*"
+flask = "*"
+
+[requires]
+python_version = "3.7"
+
+[dev-packages]
+pytest = "*"
+pylint = "*"
+pytest-cov = "*"
+flake8 = "*"
+mypy = "*"
+pre-commit = "*"
+isort = "*"
+black = "*"
+
+[pipenv]
+allow_prereleases = true
